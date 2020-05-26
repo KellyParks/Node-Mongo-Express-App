@@ -10,4 +10,9 @@ Node has an events module that could replace much of the code in public/main.js.
 
 ## To Run:
 
-Open a bash terminal at the root of the project, and run `node server.js`. Then navigate to `localhost:3000` in a browser.
+Open a bash terminal at the root of the project, and run the following commands:
+
+`npm install`
+`npm start`
+
+Then navigate to `localhost:3000` in a browser.
