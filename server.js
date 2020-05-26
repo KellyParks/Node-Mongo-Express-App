@@ -4,7 +4,7 @@ const bodyParser = require('body-parser'); //middleware to help cleanup a reques
 const MongoClient = require('mongodb').MongoClient;
 
 const connectionString = 'mongodb+srv://sampleProject:summer2020@sampleproject-so3lj.mongodb.net/test?retryWrites=true&w=majority';
-MongoClient.connect(connectionString, {useUnifiedTopology: true})
+MongoClient.connect(connectionString, { useUnifiedTopology: true })
     .then(client => {
         console.log('Connected to DB');
         const db = client.db('star-wars-quotes');
@@ -59,7 +59,7 @@ MongoClient.connect(connectionString, {useUnifiedTopology: true})
                 if (result.deletedCount === 0){
                     return res.json('No quote to delete');
                 }
-                res.json('Deleted Darth Vadar\'s quote');
+                res.json('Deleted Darth Vader\'s quote');
             })
             .catch(error => console.error(error))
         })
@@ -69,11 +69,3 @@ MongoClient.connect(connectionString, {useUnifiedTopology: true})
         });
 
     }).catch(error => console.log(error));
-
-
-
-// app.get('/', (request, response) => {
-//     /* Send a file back to the browser, and use Node's __dirname variable, which is available
-//     to us through Node's module wrapper function, to locate that file. */
-//     response.sendFile(__dirname + '/index.html');
-// });
